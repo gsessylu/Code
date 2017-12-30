@@ -27,7 +27,7 @@ var ol_button_classname = 'ol_readapi_button';
 
 // Find all book divs and concatenate ids from them to create a read
 // API query url
-function create_query() {
+$('document').ready(function create_query() {
     var q = 'https://openlibrary.org/api/volumes/brief/json/';
 
     function add_el(i, el) {
@@ -51,7 +51,7 @@ function create_query() {
 
     $('.' + magic_classname).each(add_el);
     return q;
-}
+})
 
 function make_read_button(bookdata) {
     buttons = {
